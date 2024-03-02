@@ -24,4 +24,59 @@
 body {
   font-size: 1.2rem;
   font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--Soft-blue);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.main-content {
+  max-width: 920px;
+  height: 510px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.faq-content h1 {
+  margin-top: 62px;
+  margin-bottom: 25px;
+}
+
+.block {
+  width: 360px;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  position: relative;
+}
+
+.content {
+  width: 340px;
+  height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--Dark-grayish-blue);
+  transition: all .5s ease;
+}
+
+.block.active .content {
+  height: 3em;
+}
+
+.block img {
+  position: absolute;
+  right: 20px;
+}
+
+.block.active .arrow {
+  transform:rotate(180deg);
+}
+
+.block.active .question{
+  font-weight: bold;
 }
